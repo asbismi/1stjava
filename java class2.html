@@ -1,25 +1,25 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Library System</title>
+	<title>js</title>
 </head>
 <body>
-  <script>
-    const book = {
-      title: "The Alchemist",
-      author: "Paulo Coelho",
-      year: 1988,
-      getSummary: function() {
-        return thebook $ {this.title}was written by ${this.author} in ${this.year}'
-      }
-    };
+<script type="text/javascript">
+	let book={
+		title: "The Alchemist",
+		author:"paulo coelho",
+		year:1988,
 
-    function printBookSummary(bookObj) {
-      console.log('bookObj.getSummary'());
-    
-      document.write(bookObj.getSummary());
-    }
-    printBookSummary(book);
-  </script>
+		 getSummary:function(){
+		 return 'The name is ' + this.title + ',was written by ' + this.author + 'in '+ this.year + '.';
+		 	}
+
+	};
+function  printBookSummary(bookObj) {
+	console.log(bookObj.getSummary());
+}
+printBookSummary(book);
+
+</script>
 </body>
 </html>
