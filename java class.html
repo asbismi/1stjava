@@ -5,7 +5,8 @@
 </head>
 <body>
 
-
+<P id="demo"></P>
+<p id="demo_1"></p>
 <script type="text/javascript"  language="javascript">
 	var tshirtCount=5;
 	var tshirtprice=400;
@@ -14,11 +15,12 @@
 	var capprice=150;
 
 var totalEarnings=(tshirtCount* tshirtprice)+(capcount*capprice);
-document.write("totalEarnings:" + totalEarnings+"<br>");
+document.getElementById("demo").innerHTML="totalEarnings:" + totalEarnings;
 
 var tshirtprice=450;
+
 var updatedEarnings=(tshirtCount* tshirtprice)+(capcount*capprice);
-document.write("updatedTotal:" + updatedEarnings);
+document.getElementById("demo_1").innerHTML="updatedTotal:" + updatedEarnings;
 
 </script>
 </body>
