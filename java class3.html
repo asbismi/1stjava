@@ -1,14 +1,29 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>feedback cleaner</title>
+	<title>js</title>
 </head>
 <body>
-    <h2>check console for output</h2>
-    <script>
-        var feedback=""
-    </script>
+<script type="text/javascript">
+	function myfunction(){
+		var str = "   I loved the FOOD and the service!   ";
+		str=str.trim();
+		str=str.toLowerCase();
+
+		str=str.replace("food","ambience");
+
+console.log("feedback:",str );
+
+		var position = str.indexOf("service");
+		console.log("position of 'service':", position);
+
+		var wordsArray = str.split(" ");
+      console.log("Array of words:", wordsArray);
+
+
+
+	}
+	myfunction();
+</script>
 </body>
 </html>
