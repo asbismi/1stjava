@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>web game</title>
+</head>
+<body>
+    <script type="text/javascript">
+     
+var mysteryLevel = Math.floor(Math.random() * 50) + 1;
+var userInput = "45"; 
+var userScore = Number(userInput);
+
+var difference = Math.abs(mysteryLevel - userScore);
+console.log("Mystery Level:", mysteryLevel);
+console.log("User Score:", userScore);
+console.log("Absolute Difference:", difference);
+
+console.log("Square Root of User Score:", Math.sqrt(userScore));
+
+console.log("Value of Pi:", Math.PI);
+var implicitResult = "20" * 5;
+console.log('Result of "20" * 5:', implicitResult);
+var highest = Math.max(10, 20, mysteryLevel);
+var lowest = Math.min(10, 20, mysteryLevel);
+console.log("Highest Value:", highest);
+console.log("Lowest Value:", lowest );  
+    </script>
+</body>
+</html>
