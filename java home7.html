@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Reminder Tool</title>
+</head>
+<body>
+   <h2>Event Reminder Tool</h2> 
+   <p>Entera a past date(example:your last birthday):</p>
+   <input type="date"id="eventDate"onchange="showEventDetails()">
+    
+   <script type="text/javascript">
+   function showEventDetails(){
+   inputDate=document.getElementById("evenDate").value;
+   let evenDate=new Date(inputDate);
+   let year=evenDate.getFullYear();
+   let day=evenDate.getDate();
+   let month=["january","february","march","april","may","june","july","august","september","october","november","december"];
+   let monthName=month[evenDate.getMonth()];
+   let today=new Date();
+   letyearpassed=today.getFullYear()-year;
+   let message;
+   if(yearpassed>=1){
+    message="it has been more than a year since that date.";
+     }else{
+        message="it has been less than a year since that date.";
+     }  
+     document.getElementById("output").innerHTML="the date was"+" "+monthName+"<br>full years passed:"+yearspassed+"<br>"+message;
+    }
+   </script>
+    
+
+</body>
+</html>
