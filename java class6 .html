@@ -1,4 +1,4 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -7,38 +7,37 @@
 <body>
 
 <script>
-  
   let productNames = ["Apple", "Banana", "Orange", "Mango"];
   let productPrices = [50, 30, 60, 40];
 
-  
+  // Build product list
   let products = [];
   for (let i = 0; i < productNames.length; i++) {
-    products.push(Product: ${productNames[i]} - Price: ${productPrices[i]});
+    products.push(`Product: ${productNames[i]} - Price: ${productPrices[i]}`);
   }
 
-  
+  // Display all products
   document.write("<h3>All Products</h3>");
   for (let i = 0; i < products.length; i++) {
     document.write(products[i] + "<br>");
   }
 
-  
+  // Display products with price > 50
   document.write("<h3>Products with Price > 50</h3>");
   for (let i = 0; i < productNames.length; i++) {
     if (productPrices[i] > 50) {
-      document.write(Product: ${productNames[i]} - Price: ${productPrices[i]}<br>);
+      document.write(`Product: ${productNames[i]} - Price: ${productPrices[i]}<br>`);
     }
   }
 
-  
+  // Add new product
   productNames.push("Watermelon");
   productPrices.push(80);
 
-  
+  // Display updated product list
   document.write("<h3>Updated Product List (After Adding Watermelon)</h3>");
   for (let i = 0; i < productNames.length; i++) {
-    document.write(Product: ${productNames[i]} - Price: ${productPrices[i]}<br>);
+    document.write(`Product: ${productNames[i]} - Price: ${productPrices[i]}<br>`);
   }
 </script>
 
