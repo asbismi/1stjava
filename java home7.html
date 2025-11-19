@@ -1,35 +1,40 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Event Reminder Tool</title>
 </head>
 <body>
-   <h2>Event Reminder Tool</h2> 
-   <p>Entera a past date(example:your last birthday):</p>
-   <input type="date"id="eventDate"onchange="showEventDetails()">
-    
-   <script type="text/javascript">
-   function showEventDetails(){
-   inputDate=document.getElementById("evenDate").value;
-   let evenDate=new Date(inputDate);
-   let year=evenDate.getFullYear();
-   let day=evenDate.getDate();
-   let month=["january","february","march","april","may","june","july","august","september","october","november","december"];
-   let monthName=month[evenDate.getMonth()];
-   let today=new Date();
-   letyearpassed=today.getFullYear()-year;
-   let message;
-   if(yearpassed>=1){
-    message="it has been more than a year since that date.";
-     }else{
-        message="it has been less than a year since that date.";
-     }  
-     document.getElementById("output").innerHTML="the date was"+" "+monthName+"<br>full years passed:"+yearspassed+"<br>"+message;
-    }
-   </script>
-    
+    <h2>Event Reminder Tool</h2>
+    <p>Enter a past date (example: your last birthday):</p>
+    <input type="date" id="eventDate" onchange="showEventDetails()">
 
+    <p id="output"></p>
+
+<script type="text/javascript">
+function showEventDetails() {
+    
+    let inputDate = document.getElementById("eventDate").value;
+    let eventDate = new Date(inputDate);
+    let year = eventDate.getFullYear();
+    let day = eventDate.getDate();
+    let months = [
+        "January","February","March","April","May","June",
+        "July","August","September","October","November","December"
+    ];
+    let monthName = months[eventDate.getMonth()];
+    let today = new Date();
+    let yearsPassed = today.getFullYear() - year;
+    let message;
+    if (yearsPassed >= 1) {
+        message = "It has been more than a year since that date.";
+    } else {
+        message = "It has been less than a year since that date.";
+    }
+    document.getElementById("output").innerHTML =
+        "The date was " + day + " " + monthName + ", " + year +
+        "<br>Full years passed: " + yearsPassed +
+        "<br>" + message;
+}
+</script>
 </body>
 </html>
