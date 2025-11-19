@@ -1,11 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Grocery Store Product and Quantity</title>
 </head>
 <body>
+  <script>
     
+    let store = {
+      apple: 30,
+      banana: 60,
+      mango: 115,
+      grapes: 40,
+      orange: 25
+    };
+    let product = "mango";
+
+    switch(product){
+      case "apple": console.log("The quantity of apple is " + store.apple); break;
+      case "banana": console.log("The quantity of banana is " + store.banana); break;
+      case "mango": console.log("The quantity of mango is " + store.mango); break;
+      case "grapes": console.log("The quantity of grapes is " + store.grapes); break;
+      case "orange": console.log("The quantity of orange is " + store.orange); break;
+      default: console.log("Product not available");
+    }
+
+    let quantity = store[product]; 
+    if(quantity < 100){
+      console.log("Normal purchase");
+    } else {
+      console.log("High purchase");
+    }
+  </script>
 </body>
 </html>
