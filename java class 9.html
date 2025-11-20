@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>website</title>
+</head>
+<body>
+    <script>
+        function sanitizecomment(comment){
+            var digitRegex = /\d+/g;
+            var hasnumbers = digitRegex.test(comment);
+            var updatedcomment = comment.replace(digitRegex, "NUMBER");
+            return {
+                updatedcomment: updatedcomment,
+                hasnumbers: hasnumbers
+            };
+        }
+        var testComment="My son is 12 years old.our flat number is 45 and contact is 9876543210.";
+        console.log(sanitizecomment(testComment));
+    </script>
+</body>
+</html>
