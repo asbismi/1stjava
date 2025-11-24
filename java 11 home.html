@@ -18,8 +18,7 @@
   getName() {
     return this.name;
   }
-
-  
+ 
   getAge() {
     return this.age;
   }
@@ -31,25 +30,13 @@
       console.log("❌ Invalid email: must contain '@'");
     }
   }
-
-  // Optional: getter for email
   getEmail() {
     return this._email;
   }
 }
-
-// ----------------------------
-// Create a user object
-// ----------------------------
 const user1 = new User("Alexa", 25, "alexa14@.com");
-
-// Try updating email (incorrect)
 user1.setEmail("invalid-email");
-
-// Try updating email (correct)
 user1.setEmail("alexa@newdomain.com");
-
-// Print details
 console.log("Name:", user1.getName());
 console.log("Age:", user1.getAge());
 console.log("Email:", user1.getEmail());
