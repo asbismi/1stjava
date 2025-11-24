@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>user system</title>
+</head>
+<body>
+    <script>
+    class User {
+  constructor(name, age, email) {
+    this.name = name;
+    this.age = age;
+    this._email = email;   
+  }
+
+  
+  getName() {
+    return this.name;
+  }
+
+  
+  getAge() {
+    return this.age;
+  }
+
+  setEmail(newEmail) {
+    if (newEmail.includes("@")) {
+      this._email = newEmail;
+    } else {
+      console.log("❌ Invalid email: must contain '@'");
+    }
+  }
+
+  // Optional: getter for email
+  getEmail() {
+    return this._email;
+  }
+}
+
+// ----------------------------
+// Create a user object
+// ----------------------------
+const user1 = new User("Alexa", 25, "alexa14@.com");
+
+// Try updating email (incorrect)
+user1.setEmail("invalid-email");
+
+// Try updating email (correct)
+user1.setEmail("alexa@newdomain.com");
+
+// Print details
+console.log("Name:", user1.getName());
+console.log("Age:", user1.getAge());
+console.log("Email:", user1.getEmail());
+</script>
+</body>
+</html>
