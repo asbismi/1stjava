@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Feedback Page</title>
+
+    <style>
+
+        #confirmation {
+            color: green;
+            display: none;
+            margin-top: 10px;
+        }
+        #feedbackOutput {
+            margin-top: 20px;
+            font-size: 1.1em;
+            color: black;
+        }
+        #feedbackOutput:hover {
+            color: blue;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2>Feedback Form</h2>
+
+    <form id="feedbackForm">
+        <label>Your Name:</label><br>
+        <input type="text" id="name" required><br><br>
+
+        <label>Your Feedback:</label><br>
+        <textarea id="feedback" required></textarea><br><br>
+
+        <button type="submit">Submit</button>
+    </form>
+
+    <div id="confirmation">Thanks for your feedback!</div>
+
+    <div id="feedbackOutput"></div>
+
+
+    <script>
+        const form = document.getElementById("feedbackForm");
+        const confirmation = document.getElementById("confirmation");
+        const output = document.getElementById("feedbackOutput");
+
+        form.addEventListener("submit", function(event) {
+            event.preventDefault(); 
+
+            const name = document.getElementById("name").value;
+            const feedback = document.getElementById("feedback").value;
+            output.textContent = `Name: ${name} | Feedback: ${feedback}`;
+            confirmation.style.display = "block";
+            setTimeout(() => {
+                confirmation.style.display = "none";
+            }, 5000);
+            form.reset();
+        });
+    </script>
+
+</body>
+</html>
