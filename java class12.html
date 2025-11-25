@@ -1,11 +1,53 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Text Display Example</title>
+
+    <style>
+        #output {
+            color: blue;
+            font-size: 1.2em;
+            margin-top: 15px;
+        }
+        #output:hover {
+            color: green;
+            cursor: pointer;
+        }
+    </style>
 </head>
+
 <body>
-    
+
+    <h2>Enter Text</h2>
+
+    <form id="textForm">
+        <input type="text" id="userText" required>
+        <button type="submit">Submit</button>
+    </form>
+
+    <p id="output"></p>
+
+    <script>
+        const form = document.getElementById("textForm");
+        const output = document.getElementById("output");
+
+        form.addEventListener("submit", function(event) {
+            event.preventDefault(); 
+
+            const text = document.getElementById("userText").value;
+            output.textContent = text;
+            output.style.color = "blue";
+
+            form.reset();
+        });
+        output.addEventListener("mouseover", function() {
+            output.style.color = "green";
+        });
+
+        output.addEventListener("mouseout", function() {
+            output.style.color = "blue";
+        });
+    </script>
+
 </body>
 </html>
